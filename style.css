@@ -1,0 +1,9 @@
+:root{
+    --clr-vdarkmagenta: hsl(300, 43%, 22%);
+    --clr-softpink:hsl(333, 80%, 67%) ;
+    --clr-darkgraymagenta: hsl(303, 10%, 53%);
+    --clr-lightgraymagenta: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+    --font-semibold: 500px;
+    --font-bold: 700px;
+}
