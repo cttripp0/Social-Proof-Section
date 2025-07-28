@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Social proof section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,53 +27,80 @@
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>10,000+ of our users love our products.</h1>
-      <p>
+  <main class="proof">
+    <header class="proof__hero">
+      <h1 class="proof__hero-headline clr-primary-800 text-center">10,000+ of our users love our products.</h1>
+      <p class="proof__hero-subtext clr-primary-600">
         We only provide great products combined with excellent customer service.
         See what our satisfied customers are saying about our services.
       </p>
     </header>
-    <aside>
-      <ul>
-        <li>Rated 5 Stars in Reviews</li>
-        <li>Rated 5 Stars in Report Guru</li>
-        <li>Rated 5 Stars in BestTech</li>
-      </ul>
-    </aside>
-    <section>
-      <article>
-        <h2>Colton Smith</h2>
-        <p>Verified Buyer</p>
-        <blockquote>
+    <section class="proof__ratings clr-primary-800">
+      <div class="proof__rating">
+        <div class="proof__rating-stars"> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg"
+            alt=""> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg" alt=""> <img
+            src="images/icon-star.svg" alt=""> </div>
+        Rated 5 Stars in Reviews
+      </div>
+      <div class="proof__rating">
+        <div class="proof__rating-stars"> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg"
+            alt=""> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg" alt=""> <img
+            src="images/icon-star.svg" alt=""> </div>
+        Rated 5 Stars in Report Guru</div>
+      <div class="proof__rating">
+        <div class="proof__rating-stars"> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg"
+            alt=""> <img src="images/icon-star.svg" alt=""> <img src="images/icon-star.svg" alt=""> <img
+            src="images/icon-star.svg" alt=""> </div>
+        Rated 5 Stars in BestTech</div>
+    </section>
+    <section class="proof__testimonials clr-neutral-100">
+      <article class="proof__testimonial">
+        <div class="proof__testimonial-headline">
+          <img src="images/image-colton.jpg">
+          <div class="proof__testimonial-info">
+            <h2>Colton Smith</h2>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p class="proof__testimonial-text">
           "We needed the same printed design as the one we had ordered a week prior.
           Not only did they find the original order, but we also received it in time.
           Excellent!"
-        </blockquote>
+        </p>
       </article>
-      <article>
-        <h2>Irene Roberts</h2>
-        <p>Verified Buyer</p>
-        <blockquote>
+      <article class="proof__testimonial">
+        <div class="proof__testimonial-headline">
+          <img src="images/image-irene.jpg">
+          <div class="proof__testimonial-info">
+            <h2>Irene Roberts</h2>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p class="proof__testimonial-text">
           "Customer service is always excellent and very quick turn around. Completely
           delighted with the simplicity of the purchase and the speed of delivery."
-        </blockquote>
+        </p>
       </article>
-      <article>
-        <h2>Anne Wallace</h2>
-        <p>Verified Buyer</p>
-        <blockquote>
+      <article class="proof__testimonial">
+        <div class="proof__testimonial-headline">
+          <img src="images/image-anne.jpg">
+          <div class="proof__testimonial-info">
+            <h2>Anne Wallace</h2>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+        <p class="proof__testimonial-text">
           "Put an order with this company and can only praise them for the very high
           standard. Will definitely use them again and recommend them to everyone!"
-        </blockquote>
+        </p>
       </article>
     </section>
   </main>
 
   <div class="attribution">
     Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">cttripp0</a>.
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+      Name Here</a>.
   </div>
 </body>
 
