@@ -1,9 +1,167 @@
-:root{
-    --clr-vdarkmagenta: hsl(300, 43%, 22%);
-    --clr-softpink:hsl(333, 80%, 67%) ;
-    --clr-darkgraymagenta: hsl(303, 10%, 53%);
-    --clr-lightgraymagenta: hsl(300, 24%, 96%);
-    --clr-white: hsl(0, 0%, 100%);
-    --font-semibold: 500px;
-    --font-bold: 700px;
+/*======================================= 
+Variables
+=======================================*/
+
+:root {
+    /* Colors */
+    --clr-primary-800: hsl(300, 43%, 22%);
+    /* Very Dark Magenta */
+    --clr-primary-600: hsl(303, 10%, 53%);
+    /* Dark Grayish Magenta */
+    --clr-primary-100: hsl(300, 24%, 96%);
+    /* Light Grayish Magenta */
+    --clr-accent-400: hsl(333, 80%, 67%);
+    /* Soft Pink */
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    /* White */
+
+    /* Font Family */
+    --ff-base: 'League Spartan', sans-serif;
+
+    /* Font Sizes */
+    --fs-400: 0.9375rem;
+    /* 15px */
+    --fs-800: 2rem;
+    /* 32px */
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-semibold: 500;
+    --fw-bold: 700;
+}
+
+/*======================================= 
+Global
+=======================================*/
+*{
+    box-sizing: border-box
+}
+body {
+    font-family: var(--ff-base);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2, p{
+    font-size: inherit;
+    margin: 0px;
+}
+
+/*======================================= 
+Custom
+=======================================*/
+
+/*================= 
+Proof 
+=================*/
+.proof {
+    padding: 2rem;
+}
+
+/*================= 
+Proof Hero
+=================*/
+
+/*================= 
+Proof Ratings
+=================*/
+.proof__ratings{
+    display:flex;
+    flex-direction: column;
+    gap: var(--fs-400)
+}
+
+.proof__rating{
+    background-color: var(--clr-primary-100);
+    padding-block: var(--fs-400);
+    border-radius: .5rem;
+    font-weight: var(--fw-bold);
+    display:flex;
+    flex-direction:column;
+    gap: var(--fs-400)
+
+}
+/*================= 
+Proof Testimonials
+=================*/
+
+.proof__testimonials{
+    display:flex;
+    flex-direction:column;
+    gap: var(--fs-400)
+}
+
+.proof__testimonial{
+    background-color:var(--clr-primary-800);
+    padding: var(--fs-400) var(--fs-800);
+    border-radius: .5rem;
+}
+
+.proof__testimonial-headline{
+    display: flex;
+}
+
+.proof__testimonial-headline img{
+    height: 100%;
+}
+.proof__testimonial-text{
+    text-align: left;
+}
+
+/*======================================= 
+Utility
+=======================================*/
+
+/* Colors */
+
+.clr-primary-800 {
+    color: var(--clr-primary-800);
+}
+
+.clr-primary-600 {
+    color: var(--clr-primary-600);
+}
+
+.clr-primary-100 {
+    color: var(--clr-primary-100);
+}
+
+.clr-accent-400 {
+    color: var(--clr-accent-400);
+}
+
+.clr-neutral-100 {
+    color: var(--clr-neutral-100);
+}
+
+/*Font Weights */
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-semibold {
+
+    font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+/* Font Sizes */
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+/* Text Align */
+
+.text-left {
+    text-align: left;
 }
