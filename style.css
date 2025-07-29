@@ -1,30 +1,21 @@
 /*======================================= 
 Variables
 =======================================*/
-
 :root {
     /* Colors */
     --clr-primary-800: hsl(300, 43%, 22%);
-    /* Very Dark Magenta */
     --clr-primary-600: hsl(303, 10%, 53%);
-    /* Dark Grayish Magenta */
     --clr-primary-100: hsl(300, 24%, 96%);
-    /* Light Grayish Magenta */
     --clr-accent-400: hsl(333, 80%, 67%);
-    /* Soft Pink */
     --clr-neutral-100: hsl(0, 0%, 100%);
-    /* White */
 
-    /* Font Family */
+    /* Font */
     --ff-base: 'League Spartan', sans-serif;
 
     /* Font Sizes */
     --fs-300: .875rem;
-
     --fs-400: 0.9375rem;
-    /* 15px */
     --fs-800: 2rem;
-    /* 32px */
 
     /* Font Weights */
     --fw-regular: 400;
@@ -33,47 +24,35 @@ Variables
 }
 
 /*======================================= 
-Global
+Global Styles
 =======================================*/
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--ff-base);
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-h2,
-p {
+h2, p {
     font-size: inherit;
-    margin: 0px;
+    margin: 0;
 }
 
 /*======================================= 
-Custom
+Proof Section
 =======================================*/
-
-/*================= 
-Proof 
-=================*/
 .proof {
     padding: 2rem;
 }
 
-/*================= 
-Proof Hero
-=================*/
-
 .proof__hero-headline {
-    font-size: clamp(2rem, 4vw, 4rem)
+    font-size: clamp(2rem, 4vw, 4rem);
 }
 
-/*================= 
-Proof Ratings
-=================*/
 .proof__ratings {
     display: flex;
     flex-direction: column;
@@ -82,7 +61,7 @@ Proof Ratings
 }
 
 .proof__rating {
-    background-color: var(--clr-primary-100);
+    background: var(--clr-primary-100);
     padding-block: var(--fs-400);
     border-radius: .5rem;
     font-weight: var(--fw-bold);
@@ -90,21 +69,16 @@ Proof Ratings
     flex-direction: column;
     gap: var(--fs-400);
     width: 100%;
-
 }
-
-/*================= 
-Proof Testimonials
-=================*/
 
 .proof__testimonials {
     display: flex;
     flex-direction: column;
-    gap: var(--fs-400)
+    gap: var(--fs-400);
 }
 
 .proof__testimonial {
-    background-color: var(--clr-primary-800);
+    background: var(--clr-primary-800);
     padding: var(--fs-400) var(--fs-800);
     border-radius: .5rem;
 }
@@ -118,7 +92,7 @@ Proof Testimonials
 
 .proof__testimonial-headline img {
     height: 1.8rem;
-    border-radius: 2rem
+    border-radius: 2rem;
 }
 
 .proof__testimonial-text {
@@ -126,119 +100,63 @@ Proof Testimonials
 }
 
 .proof__testimonial-info p {
-    color: var(--clr-accent-400)
-}
-
-
-/*======================================= 
-Utility
-=======================================*/
-
-/* Colors */
-
-.clr-primary-800 {
-    color: var(--clr-primary-800);
-}
-
-.clr-primary-600 {
-    color: var(--clr-primary-600);
-}
-
-.clr-primary-100 {
-    color: var(--clr-primary-100);
-}
-
-.clr-accent-400 {
     color: var(--clr-accent-400);
 }
 
-.clr-neutral-100 {
-    color: var(--clr-neutral-100);
-}
+/*======================================= 
+Utility Classes
+=======================================*/
+.clr-primary-800 { color: var(--clr-primary-800); }
+.clr-primary-600 { color: var(--clr-primary-600); }
+.clr-primary-100 { color: var(--clr-primary-100); }
+.clr-accent-400  { color: var(--clr-accent-400); }
+.clr-neutral-100 { color: var(--clr-neutral-100); }
 
-/*Font Weights */
+.fw-regular  { font-weight: var(--fw-regular); }
+.fw-semibold { font-weight: var(--fw-semibold); }
+.fw-bold     { font-weight: var(--fw-bold); }
 
-.fw-regular {
-    font-weight: var(--fw-regular);
-}
+.fs-400 { font-size: var(--fs-400); }
+.fs-800 { font-size: var(--fs-800); }
 
-.fw-semibold {
+.text-left { text-align: left; }
+.margin-bottom { margin-bottom: 1rem; }
 
-    font-weight: var(--fw-semibold);
-}
-
-.fw-bold {
-    font-weight: var(--fw-bold);
-}
-
-/* Font Sizes */
-
-.fs-400 {
-    font-size: var(--fs-400);
-}
-
-.fs-800 {
-    font-size: var(--fs-800);
-}
-
-/* Text Align */
-
-.text-left {
-    text-align: left;
-}
-
-/* Margin Bottom */
-.margin-bottom {
-    margin-bottom: 1rem;
-}
-
+/*======================================= 
+Desktop Styles
+=======================================*/
 @media (min-width: 1000px) {
-    .proof{
-        padding: 5rem
+    .proof {
+        padding: 5rem;
     }
-
     .proof__top {
         display: flex;
         gap: 10rem;
     }
-
-    .proof__hero-headline{
-        margin-top: 0px;
+    .proof__hero-headline {
+        margin-top: 0;
     }
-
     .proof__hero {
         text-align: left;
     }
-
     .proof__ratings {
         width: 100%;
     }
-
     .proof__rating {
         flex-direction: row;
         justify-content: center;
         font-size: var(--fs-300);
         width: 90%;
     }
-
-    .first {
-        align-self: start;
-    }
-
-    .second {
-        align-self: center;
-    }
-
-    .third {
-        align-self: end;
-    }
-
-    .proof__testimonials{
+    .first   { align-self: flex-start; }
+    .second  { align-self: center; }
+    .third   { align-self: flex-end; }
+    .proof__testimonials {
         margin-top: 2.5rem;
         flex-direction: row;
-        height:15rem;
+        height: 15rem;
     }
-    .proof__testimonial{
+    .proof__testimonial {
         padding-block: 3rem;
     }
 }
