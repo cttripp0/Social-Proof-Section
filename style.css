@@ -192,34 +192,53 @@ Utility
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
+    .proof{
+        padding: 5rem
+    }
+
     .proof__top {
         display: flex;
         gap: 10rem;
+    }
+
+    .proof__hero-headline{
+        margin-top: 0px;
     }
 
     .proof__hero {
         text-align: left;
     }
 
-    .proof__ratings {}
+    .proof__ratings {
+        width: 100%;
+    }
 
     .proof__rating {
         flex-direction: row;
         justify-content: center;
         font-size: var(--fs-300);
-        width: 110%
+        width: 90%;
     }
 
-    .proof__rating .first {
-        align-self: flex-start;
+    .first {
+        align-self: start;
     }
 
-    .proof__rating .second {
+    .second {
         align-self: center;
     }
 
-    .proof__rating .third {
-        align-self: flex-end;
+    .third {
+        align-self: end;
+    }
+
+    .proof__testimonials{
+        margin-top: 2.5rem;
+        flex-direction: row;
+        height:15rem;
+    }
+    .proof__testimonial{
+        padding-block: 3rem;
     }
 }
