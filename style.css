@@ -19,6 +19,8 @@ Variables
     --ff-base: 'League Spartan', sans-serif;
 
     /* Font Sizes */
+    --fs-300: .875rem;
+
     --fs-400: 0.9375rem;
     /* 15px */
     --fs-800: 2rem;
@@ -33,9 +35,10 @@ Variables
 /*======================================= 
 Global
 =======================================*/
-*{
+* {
     box-sizing: border-box
 }
+
 body {
     font-family: var(--ff-base);
     text-align: center;
@@ -43,7 +46,8 @@ body {
     padding: 0px;
 }
 
-h2, p{
+h2,
+p {
     font-size: inherit;
     margin: 0px;
 }
@@ -63,60 +67,66 @@ Proof
 Proof Hero
 =================*/
 
+.proof__hero-headline {
+    font-size: clamp(2rem, 4vw, 4rem)
+}
+
 /*================= 
 Proof Ratings
 =================*/
-.proof__ratings{
-    display:flex;
+.proof__ratings {
+    display: flex;
     flex-direction: column;
     gap: var(--fs-400);
     width: 100%;
 }
 
-.proof__rating{
+.proof__rating {
     background-color: var(--clr-primary-100);
     padding-block: var(--fs-400);
     border-radius: .5rem;
     font-weight: var(--fw-bold);
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     gap: var(--fs-400);
     width: 100%;
 
 }
+
 /*================= 
 Proof Testimonials
 =================*/
 
-.proof__testimonials{
-    display:flex;
-    flex-direction:column;
+.proof__testimonials {
+    display: flex;
+    flex-direction: column;
     gap: var(--fs-400)
 }
 
-.proof__testimonial{
-    background-color:var(--clr-primary-800);
+.proof__testimonial {
+    background-color: var(--clr-primary-800);
     padding: var(--fs-400) var(--fs-800);
     border-radius: .5rem;
 }
 
-.proof__testimonial-headline{
+.proof__testimonial-headline {
     display: flex;
     gap: 1.5rem;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.proof__testimonial-headline img{
+.proof__testimonial-headline img {
     height: 1.8rem;
     border-radius: 2rem
 }
-.proof__testimonial-text{
+
+.proof__testimonial-text {
     text-align: left;
 }
 
-.proof__testimonial-info p{
-color: var(--clr-accent-400)
+.proof__testimonial-info p {
+    color: var(--clr-accent-400)
 }
 
 
@@ -181,17 +191,35 @@ Utility
 .margin-bottom {
     margin-bottom: 1rem;
 }
-@media (min-width: 1440px){
-    .proof__top{
-        display: flex
+
+@media (min-width: 768px) {
+    .proof__top {
+        display: flex;
+        gap: 10rem;
     }
 
-    .proof{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
+    .proof__hero {
+        text-align: left;
     }
 
+    .proof__ratings {}
 
+    .proof__rating {
+        flex-direction: row;
+        justify-content: center;
+        font-size: var(--fs-300);
+        width: 110%
+    }
+
+    .proof__rating .first {
+        align-self: flex-start;
+    }
+
+    .proof__rating .second {
+        align-self: center;
+    }
+
+    .proof__rating .third {
+        align-self: flex-end;
+    }
 }
