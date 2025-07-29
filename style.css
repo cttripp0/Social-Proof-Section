@@ -69,7 +69,8 @@ Proof Ratings
 .proof__ratings{
     display:flex;
     flex-direction: column;
-    gap: var(--fs-400)
+    gap: var(--fs-400);
+    width: 100%;
 }
 
 .proof__rating{
@@ -79,7 +80,8 @@ Proof Ratings
     font-weight: var(--fw-bold);
     display:flex;
     flex-direction:column;
-    gap: var(--fs-400)
+    gap: var(--fs-400);
+    width: 100%;
 
 }
 /*================= 
@@ -100,14 +102,23 @@ Proof Testimonials
 
 .proof__testimonial-headline{
     display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .proof__testimonial-headline img{
-    height: 100%;
+    height: 1.8rem;
+    border-radius: 2rem
 }
 .proof__testimonial-text{
     text-align: left;
 }
+
+.proof__testimonial-info p{
+color: var(--clr-accent-400)
+}
+
 
 /*======================================= 
 Utility
@@ -164,4 +175,23 @@ Utility
 
 .text-left {
     text-align: left;
+}
+
+/* Margin Bottom */
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+@media (min-width: 1440px){
+    .proof__top{
+        display: flex
+    }
+
+    .proof{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
 }
