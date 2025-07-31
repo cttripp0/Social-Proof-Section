@@ -26,137 +26,122 @@ Variables
 /*======================================= 
 Global Styles
 =======================================*/
-* {
-    box-sizing: border-box;
+body {
+    margin: 3rem 1.5rem;
+    font-weight: .9375rem;
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
 }
 
-body {
-    font-family: var(--ff-base);
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
-}
-
-h2, p {
     font-size: inherit;
-    margin: 0;
+    font-weight: inherit;
 }
 
 /*======================================= 
 Proof Section
 =======================================*/
+
 .proof {
-    padding: 2rem;
+    height: 100vh;
+    display: grid;
 }
 
-.proof__hero-headline {
-    font-size: clamp(2rem, 4vw, 4rem);
+/* Proof Header */
+
+.proof__header {
+    display: grid;
+    gap: 1rem;
 }
 
+/* Proof Ratings */
 .proof__ratings {
-    display: flex;
-    flex-direction: column;
-    gap: var(--fs-400);
-    width: 100%;
+    display: grid;
+    gap: 1rem;
 }
 
 .proof__rating {
-    background: var(--clr-primary-100);
-    padding-block: var(--fs-400);
+    background-color: var(--clr-primary-100);
+    padding: 1rem;
     border-radius: .5rem;
-    font-weight: var(--fw-bold);
-    display: flex;
-    flex-direction: column;
-    gap: var(--fs-400);
-    width: 100%;
+    display: grid;
+    gap: .5rem;
 }
 
+/* Proof Testimonials */
+
 .proof__testimonials {
-    display: flex;
-    flex-direction: column;
-    gap: var(--fs-400);
+    display: grid;
+    gap: 1rem;
 }
 
 .proof__testimonial {
-    background: var(--clr-primary-800);
-    padding: var(--fs-400) var(--fs-800);
+    background-color: var(--clr-primary-800);
+    padding: 1rem;
+    color: white;
     border-radius: .5rem;
 }
 
-.proof__testimonial-headline {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 1.5rem;
+
+.proof__testimonial-info{
+    display: block;
 }
 
-.proof__testimonial-headline img {
-    height: 1.8rem;
-    border-radius: 2rem;
-}
 
-.proof__testimonial-text {
-    text-align: left;
-}
-
-.proof__testimonial-info p {
-    color: var(--clr-accent-400);
-}
 
 /*======================================= 
 Utility Classes
 =======================================*/
-.clr-primary-800 { color: var(--clr-primary-800); }
-.clr-primary-600 { color: var(--clr-primary-600); }
-.clr-primary-100 { color: var(--clr-primary-100); }
-.clr-accent-400  { color: var(--clr-accent-400); }
-.clr-neutral-100 { color: var(--clr-neutral-100); }
+.clr-primary-800 {
+    color: var(--clr-primary-800);
+}
 
-.fw-regular  { font-weight: var(--fw-regular); }
-.fw-semibold { font-weight: var(--fw-semibold); }
-.fw-bold     { font-weight: var(--fw-bold); }
+.clr-primary-600 {
+    color: var(--clr-primary-600);
+}
 
-.fs-400 { font-size: var(--fs-400); }
-.fs-800 { font-size: var(--fs-800); }
+.clr-primary-100 {
+    color: var(--clr-primary-100);
+}
 
-.text-left { text-align: left; }
-.margin-bottom { margin-bottom: 1rem; }
+.clr-accent-400 {
+    color: var(--clr-accent-400);
+}
+
+.clr-neutral-100 {
+    color: var(--clr-neutral-100);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-semibold {
+    font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
 
 /*======================================= 
 Desktop Styles
 =======================================*/
-@media (min-width: 1000px) {
-    .proof {
-        padding: 5rem;
-    }
-    .proof__top {
-        display: flex;
-        gap: 10rem;
-    }
-    .proof__hero-headline {
-        margin-top: 0;
-    }
-    .proof__hero {
-        text-align: left;
-    }
-    .proof__ratings {
-        width: 100%;
-    }
-    .proof__rating {
-        flex-direction: row;
-        justify-content: center;
-        font-size: var(--fs-300);
-        width: 90%;
-    }
-    .first   { align-self: flex-start; }
-    .second  { align-self: center; }
-    .third   { align-self: flex-end; }
-    .proof__testimonials {
-        margin-top: 2.5rem;
-        flex-direction: row;
-        height: 15rem;
-    }
-    .proof__testimonial {
-        padding-block: 3rem;
-    }
-}
