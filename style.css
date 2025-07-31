@@ -26,9 +26,15 @@ Variables
 /*======================================= 
 Global Styles
 =======================================*/
+
+html, body {
+    height: 100%;
+}
+
 body {
-    margin: 3rem 1.5rem;
-    font-weight: .9375rem;
+    padding-inline: 1.5rem;
+    padding-block: 3rem;
+    font-size: .9375rem;
     text-align: center;
     font-family: "League Spartan", sans-serif;
 }
@@ -38,6 +44,7 @@ body {
     padding: 0;
     font-size: inherit;
     font-weight: inherit;
+    box-sizing: border-box;
 }
 
 /*======================================= 
@@ -45,8 +52,8 @@ Proof Section
 =======================================*/
 
 .proof {
-    height: 100vh;
     display: grid;
+    height: 100%;
 }
 
 /* Proof Header */
@@ -54,12 +61,24 @@ Proof Section
 .proof__header {
     display: grid;
     gap: 1rem;
+    align-content: center;
+}
+
+.proof__header h1 {
+    font-size: clamp(var(--fs-800), 6vw, 4rem);
+    line-height: clamp(1.7rem, 4.5vw, 3rem);
+}
+
+.proof__header p {
+    font-size: clamp(var(--fs-400), 6vw, 1rem);
+    line-height: 1.2rem;
 }
 
 /* Proof Ratings */
 .proof__ratings {
     display: grid;
     gap: 1rem;
+    align-self: center;
 }
 
 .proof__rating {
@@ -68,28 +87,57 @@ Proof Section
     border-radius: .5rem;
     display: grid;
     gap: .5rem;
+    width: 100%;
+}
+
+
+
+.proof__rating-stars {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
 }
 
 /* Proof Testimonials */
 
 .proof__testimonials {
     display: grid;
-    gap: 1rem;
+    gap: clamp(1rem, 6vw, 2rem);;
 }
 
 .proof__testimonial {
     background-color: var(--clr-primary-800);
-    padding: 1rem;
     color: white;
     border-radius: .5rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
 }
 
-
-.proof__testimonial-info{
-    display: block;
+.proof__testimonial-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+.proof__testimonial-info h2 {
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
 
+.proof__testimonial img {
+    height: 2em;
+    border-radius: 2rem;
+}
+
+.proof__testimonial p {
+    color: var(--clr-accent-400)
+}
+
+.proof__testimonial blockquote {
+    text-align: left;
+    line-height: 1.2;
+}
 
 /*======================================= 
 Utility Classes
@@ -145,3 +193,56 @@ Utility Classes
 /*======================================= 
 Desktop Styles
 =======================================*/
+
+
+@media (min-width:760px) {
+    .proof {
+        display: grid;
+        grid-template-areas:
+            "left . right"
+            "bottom bottom bottom"
+            ". . .";
+        grid-template-columns: 7fr 4fr 9fr;
+        grid-template-rows: 3fr 2.5fr 1fr ;
+    }
+
+    .proof__header {
+        grid-area: left;
+        text-align: left;
+    }
+
+    .proof__ratings {
+        grid-area: right;
+    }
+
+    .proof__rating {
+        width: 87%;
+        display: flex;
+        align-items: center;
+    }
+
+    .proof__testimonials {
+        grid-area: bottom;
+        grid-auto-flow: column;
+        border: 2px solid
+    }
+
+
+
+    .first {
+        place-self: start;
+    }
+
+    .second {
+        place-self: center;
+    }
+
+    .third {
+        place-self: end;
+    }
+
+    body {
+        padding-inline: 10%;
+        padding-block: 5%;
+    }
+}
