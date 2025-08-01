@@ -27,7 +27,8 @@ Variables
 Global Styles
 =======================================*/
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -102,7 +103,7 @@ Proof Section
 
 .proof__testimonials {
     display: grid;
-    gap: clamp(1rem, 6vw, 2rem);;
+    gap: clamp(1rem, 6vw, 2rem);
 }
 
 .proof__testimonial {
@@ -112,6 +113,7 @@ Proof Section
     display: grid;
     gap: 1rem;
     align-items: center;
+    padding: 1rem;
 }
 
 .proof__testimonial-top {
@@ -193,9 +195,21 @@ Utility Classes
 /*======================================= 
 Desktop Styles
 =======================================*/
+@media (max-width:768px) {
+    body {
+        padding-inline: 10%;
+        padding-block: 5%;
+    }
+}
 
+@media (min-width:768px) {
+    body {
+        padding-inline: 10%;
+        padding-block: 5%;
+    }
+}
 
-@media (min-width:760px) {
+@media (min-width:768px) {
     .proof {
         display: grid;
         grid-template-areas:
@@ -203,7 +217,7 @@ Desktop Styles
             "bottom bottom bottom"
             ". . .";
         grid-template-columns: 7fr 4fr 9fr;
-        grid-template-rows: 3fr 2.5fr 1fr ;
+        grid-template-rows: 3fr 1.5fr .5fr;
     }
 
     .proof__header {
@@ -224,25 +238,22 @@ Desktop Styles
     .proof__testimonials {
         grid-area: bottom;
         grid-auto-flow: column;
-        border: 2px solid
+        display:flex;
     }
 
 
 
     .first {
-        place-self: start;
+        align-self: start;
     }
 
     .second {
-        place-self: center;
+        align-self: center
     }
 
     .third {
-        place-self: end;
+        align-self: end;
     }
 
-    body {
-        padding-inline: 10%;
-        padding-block: 5%;
-    }
+
 }
