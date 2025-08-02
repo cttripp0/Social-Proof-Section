@@ -27,10 +27,10 @@ Variables
 Global Styles
 =======================================*/
 
-html,
+/* html,
 body {
     height: 100%;
-}
+}  */
 
 body {
     padding-inline: 1.5rem;
@@ -90,8 +90,6 @@ Proof Section
     gap: .5rem;
     width: 100%;
 }
-
-
 
 .proof__rating-stars {
     display: flex;
@@ -195,34 +193,30 @@ Utility Classes
 /*======================================= 
 Desktop Styles
 =======================================*/
-@media (max-width:768px) {
-    body {
-        padding-inline: 10%;
-        padding-block: 5%;
-    }
-}
 
 @media (min-width:768px) {
     body {
         padding-inline: 10%;
-        padding-block: 5%;
+        padding-block: 2%;
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:1024px) {
     .proof {
         display: grid;
         grid-template-areas:
             "left . right"
-            "bottom bottom bottom"
-            ". . .";
+            "bottom bottom bottom";
         grid-template-columns: 7fr 4fr 9fr;
-        grid-template-rows: 3fr 1.5fr .5fr;
+        grid-template-rows: auto auto;
+        max-height: 90%;
+        min-height: 85vh;
     }
 
     .proof__header {
         grid-area: left;
         text-align: left;
+        align-self: center;
     }
 
     .proof__ratings {
@@ -230,30 +224,38 @@ Desktop Styles
     }
 
     .proof__rating {
-        width: 87%;
+        width: 95%;
         display: flex;
+        justify-content: space-around;
         align-items: center;
     }
 
     .proof__testimonials {
         grid-area: bottom;
         grid-auto-flow: column;
-        display:flex;
+        display: flex;
     }
 
 
 
     .first {
-        align-self: start;
+        place-self: start;
     }
 
     .second {
-        align-self: center
+        place-self: center
     }
 
     .third {
-        align-self: end;
+        place-self: end;
     }
 
 
+}
+
+@media (min-width:1440px) {
+    .proof {
+        max-width: 85%;
+        margin-inline: auto;
+    }
 }
